@@ -1,0 +1,243 @@
+/* Basic page setup */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    color: #202638;
+    line-height: 1.5;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #172554;
+    color: white;
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.tagline {
+    color: #dbeafe;
+    font-size: 0.9rem;
+}
+
+.container {
+    width: min(900px, 90%);
+    margin: 35px auto;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    margin: 5px 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.intro, .muted {
+    color: #687086;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.summary-card, .panel {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(25, 35, 65, 0.06);
+}
+
+.summary-label {
+    display: block;
+    color: #687086;
+    font-size: 0.9rem;
+}
+
+.summary-card strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.8rem;
+}
+
+.panel {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.form-row {
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd2df;
+    border-radius: 7px;
+    font: inherit;
+    background: white;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+.add-button {
+    border: 0;
+    border-radius: 7px;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background: #1d4ed8;
+}
+
+.form-message {
+    min-height: 20px;
+    margin: 8px 0 0;
+    color: #b42318;
+    font-size: 0.9rem;
+}
+
+.task-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-label {
+    min-width: 150px;
+}
+
+.filter-label select {
+    margin-top: 5px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 0;
+    border-top: 1px solid #edf0f5;
+}
+
+.task-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.task-info input {
+    width: auto;
+    margin-top: 5px;
+}
+
+.task-title {
+    display: block;
+    font-weight: bold;
+}
+
+.task-subject {
+    display: block;
+    color: #687086;
+    font-size: 0.88rem;
+}
+
+.task-item.done .task-title {
+    color: #7b8496;
+    text-decoration: line-through;
+}
+
+.delete-button {
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    padding: 8px 11px;
+    background: #fff7f7;
+    color: #b42318;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #fee2e2;
+}
+
+.empty-message {
+    padding: 18px 0 5px;
+    color: #687086;
+    text-align: center;
+}
+
+footer {
+    padding: 15px;
+    color: #687086;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .top-bar, .task-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .summary {
+        gap: 8px;
+    }
+
+    .summary-card {
+        padding: 13px;
+    }
+
+    .summary-card strong {
+        font-size: 1.4rem;
+    }
+
+    .task-item {
+        align-items: flex-start;
+    }
+}

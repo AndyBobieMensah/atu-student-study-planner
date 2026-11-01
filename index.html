@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="brand">Study Planner</div>
+        <span class="tagline">Plan your work. Reach your goals.</span>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <p class="eyebrow">YOUR PERSONAL STUDY SPACE</p>
+            <h1>Stay organised. Study smarter.</h1>
+            <p class="intro">Add your assignments and study tasks, then keep track of your progress.</p>
+        </section>
+
+        <section class="summary" aria-label="Task summary">
+            <div class="summary-card">
+                <span class="summary-label">Total tasks</span>
+                <strong id="totalCount">0</strong>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Pending</span>
+                <strong id="pendingCount">0</strong>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Completed</span>
+                <strong id="completedCount">0</strong>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Add a study task</h2>
+            <form id="taskForm">
+                <div class="form-row">
+                    <label for="taskTitle">Task title</label>
+                    <input id="taskTitle" type="text" placeholder="e.g. Revise Python functions" maxlength="100">
+                </div>
+                <div class="form-row">
+                    <label for="taskSubject">Subject or course</label>
+                    <input id="taskSubject" type="text" placeholder="e.g. Programming with Python" maxlength="60">
+                </div>
+                <button class="add-button" type="submit">+ Add task</button>
+                <p id="formMessage" class="form-message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="panel task-panel">
+            <div class="task-heading">
+                <div>
+                    <h2>Your study tasks</h2>
+                    <p class="muted">Tick a task when you finish it.</p>
+                </div>
+                <label class="filter-label" for="taskFilter">Show:
+                    <select id="taskFilter">
+                        <option value="all">All tasks</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </label>
+            </div>
+            <ul id="taskList" class="task-list"></ul>
+            <p id="emptyMessage" class="empty-message">You have no tasks yet. Add your first study task above.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Study Planner · Stay focused and keep making progress.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
